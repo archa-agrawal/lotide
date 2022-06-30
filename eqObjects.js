@@ -20,28 +20,28 @@ const eqArrays = (arr1, arr2) => {
   return true;
 }
 
-const eqObjects = (obj1, obj2) => {
+const compareValues = (value1, value2) => {
+  if (value1 instanceof Array) {
+    return eqArrays(value1, value2);
+  }
+  return value1 === value2;
+}
 
-  for (let item in obj1) {
-    if (obj1[item] instanceof Array) {
-      let value = eqArrays(obj1[item], obj2[item])
-      if (value === false) {
-        return false
-      }
-    } else if (obj1[item] !== obj2[item]) {
-      return false
-    }
+const eqObjects = (obj1, obj2) => {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) {
+    return false;
   }
-  for (let item in obj2) {
-    if (obj2[item] instanceof Array) {
-      let value = eqArrays(obj2[item], obj1[item])
-      if (value === false) {
-        return false
-      }
-    } else if (obj2[item] !== obj1[item]) {
-      return false
-    }
+
+  for (const key of keys1) {
+    const result = compareValues(obj1[key], obj2[key])
+     if (!result) {
+       return false;
+     } 
   }
+
   return true
 }
 
