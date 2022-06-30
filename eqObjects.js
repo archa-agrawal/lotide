@@ -23,7 +23,6 @@ const eqArrays = (arr1, arr2) => {
 const eqObjects = (obj1, obj2) => {
 
   for (let item in obj1) {
-    console.log(obj1[item] instanceof Array)
     if (obj1[item] instanceof Array) {
       let value = eqArrays(obj1[item], obj2[item])
       if (value === false) {
