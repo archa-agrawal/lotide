@@ -1,0 +1,29 @@
+{
+  "name": "@agrawal/lotide",
+  "version": "1.0.0",
+  "description": "A small clone of lodash",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archa-agrawal/lotide.git"
+  },
+  "author": {
+    "name":"Archana Agrawal",
+    "email": "archana.agrawal3@outlook.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archa-agrawal/lotide/issues"
+  },
+  "homepage": "https://github.com/archa-agrawal/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}

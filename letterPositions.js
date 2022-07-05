@@ -38,3 +38,5 @@ const letterPositions = (sentence) => {
 
 console.log(letterPositions('hello'))
 console.log(letterPositions("lighthouse in the house"))
+
+module.exports = letterPositions;

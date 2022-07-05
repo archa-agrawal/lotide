@@ -40,3 +40,5 @@ console.log(results1);
 assertArraysEqual(map(words, word => word[0]),[ 'g', 'c', 't', 'm', 't' ])
 assertArraysEqual(map(words, word => word[2]),[ 'o', 'n', undefined, 'j', 'm' ])
 assertArraysEqual(map(words, word => word[0] + 'eehhaa'),[ 'geehhaa', 'ceehhaa', 'teehhaa', 'meehhaa', 'teehhaa' ])
+
+module.exports = map;
